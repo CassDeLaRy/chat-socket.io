@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Chat</title>
+        <link rel = "stylesheet" href = "./normalize.css">
+        <link rel = "stylesheet" href = "./app.css">
+        <!-- <link rel = "stylesheet" href = "./bulma/css/bulma.css" -->
+    </head>
+    <body>
+        <div class="grid-container">
+            <div>
+                <ul class = "screens">
+                    <li class = "chat-screen screen">
+                        <div class = "chatArea">
+                            <ul class = "messages"></ul>
+                        </div>
+                        <input  
+                            class       = "inputMessage" 
+                            placeholder = "Escribe aqui..."
+                        />
+                        <!-- <div class="field">
+                            <label class="label">Usuario</label>
+                            <div class="control">
+                              <input class="input" id="inputMessage" type="text" placeholder="Text input">
+                            </div>
+                            <p class="help">2023 Derechos Reservados</p>
+                          </div> -->
+                        <input  
+                            class  = "photoInput" 
+                            type   = "file"  
+                            accept = "image/png, image/jpeg" 
+                            hidden
+                        />
+                        <div class="buttons">
+                            <button class = "photoButton">Foto</button>
+                            <button class="button is-primary is-focused" id="inputMessageButton">Enviar</button>
+                            <!-- <button class = "inputMessageButton">Enviar</button> -->
+                        </div>
+                    </li>
+    
+                    <li class = "login-screen screen">
+                    <div class = "form">
+                        <h1 class="title">MISIVAS</h1>
+                        <input 
+                            class = "usernameInput" 
+                            placeholder = "¿Cuál es tu nombre?" 
+                            type = "text" 
+                            maxlength = "14" 
+                        />
+                        <br>
+                        <button class="usernameButton">Entrar</button>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <div class = "conectedUsersArea">
+                <h2>BIENVENIDO</h2>
+                <ul class="userNow"></ul>
+                <h3>USUARIOS EN LÍNEA</h3>
+                <ul class = "conectedUsers"></ul>
+            </div>
+        </div>
+
+
+        <script src = "/socket.io/socket.io.js"></script>
+        <script src = "./main.js" ></script>
+    </body>
+</html>
+
